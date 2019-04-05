@@ -1,6 +1,7 @@
 $accent: hsl(26, 97%, 56%)
 $subtitle: rgb(249, 162, 96)
 $text: hsl(0, 0%, 80%)
+$white: #fff
 $dark: hsl(189, 77%, 21%)
 $background: hsl(206, 51%, 10%)
 $easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1)
@@ -81,6 +82,37 @@ h3
     padding: 0
     margin: 0
 
+.contact
+  margin-top: .75rem !important
+  display: flex
+  flex-wrap: wrap
+
+  li
+    margin-right: .75rem
+
+    &:last-child
+      margin-right: 0
+
+  a
+    background: $accent
+    color: $background
+    text-decoration: none
+    display: inline-block
+    padding: .6rem
+    width: 2.4rem
+    height: 2.4rem
+    box-sizing: border-box
+    border-radius: 1.2rem
+    transition: background .8s $easeOutCirc, color .8s $easeOutCirc
+
+    &:hover
+      background: $text
+      color: $accent
+
+  svg
+    width: 100%
+    height: 100%
+
 .date
   font-size: .8rem
 
@@ -108,3 +140,30 @@ footer
 .activated
   transform: translateY(0)
   opacity: 1
+
+.qrcode
+  padding: 1.2rem
+  border-radius: 4px
+  position: absolute
+  left: 0
+  top: 3.2rem
+  background: $white
+  color: $background
+  z-index: 3
+  visibility: hidden
+  font-size: .8rem
+  text-align: center
+  transform: translateY(1rem)
+  opacity: 0
+  transition: opacity .8s $easeOutCirc, transform .8s $easeOutCirc
+
+  img
+    width: 10rem
+
+.qrcode-container
+  position: relative
+
+  &:hover .qrcode
+    visibility: visible
+    transform: translateY(0)
+    opacity: 1
