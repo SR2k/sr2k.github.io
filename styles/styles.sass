@@ -1,8 +1,9 @@
 $accent: hsl(26, 97%, 56%)
 $subtitle: rgb(249, 162, 96)
-$text: hsl(0, 0%, 93%)
+$text: hsl(0, 0%, 80%)
 $dark: hsl(189, 77%, 21%)
 $background: hsl(206, 51%, 10%)
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1)
 
 *::selection
   background: $accent
@@ -45,13 +46,13 @@ ul
   width: calc(100% - 3.2rem)
   max-width: 980px
   margin: 0 auto
-  padding: 2.4rem 0
+  padding: 8rem 0
 
 h2
   color: $accent
   margin:
-    top: 3.6rem
-    bottom: 1.2rem
+    top: 4.8rem
+    bottom: 1.8rem
   padding-left: .75rem
   position: relative
   z-index: 1
@@ -85,7 +86,7 @@ h3
 
 hr
   border: $accent 1px dashed
-  margin: 2.4rem 0
+  margin: 3.6rem 0
 
 footer
   font-size: .8rem
@@ -98,3 +99,12 @@ footer
   a
     color: inherit
     text-decoration: none
+
+.animated
+  transform: translateY(10rem)
+  opacity: 0
+  transition: opacity .8s $easeOutCirc, transform .8s $easeOutCirc
+
+.activated
+  transform: translateY(0)
+  opacity: 1
