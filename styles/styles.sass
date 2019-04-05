@@ -1,0 +1,58 @@
+$accent: hsl(26, 97%, 56%)
+$accent-light: hsl(26, 97%, 70%)
+$subtitle: hsl(214, 91%, 50%)
+$text: hsl(0, 0%, 93%)
+$background: #0C1A25
+
+body, html
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans CJK SC', 'Noto Sans CJK CN', 'Noto Sans CJK', 'Microsoft Yahei UI', Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+  background-color: $background
+  color: $text
+  line-height: 150%
+  font-size: 16px
+
+a, a:visited
+  color: $accent
+
+a:hover, a:active
+  color: $accent-light
+
+p
+  margin:
+    top: 0
+    bottom: .2rem
+
+.container
+  width: calc(100% - 3.2rem)
+  max-width: 980px
+  margin: 0 auto
+  padding: 2.4rem 0
+
+h2
+  color: $accent
+  margin:
+    top: 3.6rem
+    bottom: 1.2rem
+  position: relative
+  z-index: 1
+
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    width: 3.6em
+    height: 5px
+    background: $text
+    bottom: 0
+    z-index: -1
+
+h3
+  margin-top: 2.4rem
+  margin-bottom: .8rem
+  color: $subtitle
+
+.heading
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
