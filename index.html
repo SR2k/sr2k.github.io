@@ -44,6 +44,12 @@
     <div id="experience" class="animated">
       <h2>实习与项目经历</h2>
 
+      <div id="experience0 class="animated">
+        <h3><img src="./assets/alibaba.svg" alt="阿里巴巴" />阿里巴巴集团 - 实习前端工程师</h3>
+        <p class="date">2019 年 7 月 - 2019 年 8 月</p>
+        <p>在阿里巴巴集团本地生活团队学习一系列基于 React 的内部技术栈，并完成简单的业务开发。</p>
+      </div>
+
       <div id="experience1" class="animated">
         <h3>天津崇光科技有限公司 - 实习 Web 前端开发</h3>
         <p class="date">2018 年 7 月 - 2018 年 10 月</p>
@@ -102,7 +108,7 @@
         triggerHook: 0.9
       }
     });
-    var elements = ["#experience", "#experience1", "#experience2", "#experience3", "#skills", "#education", "#schoolExperience"];
+    var elements = ["#experience", "#experience0", "#experience1", "#experience2", "#experience3", "#skills", "#education", "#schoolExperience"];
     elements.forEach(function (el) {
       new ScrollMagic.Scene({triggerElement: el})
         .setClassToggle(el, "activated")
