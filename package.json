@@ -25,6 +25,10 @@
       "git add"
     ]
   },
+  "scripts": {
+    "build": "NODE_ENV=prod gulp",
+    "dev": "NODE_ENV=dev gulp dev"
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",

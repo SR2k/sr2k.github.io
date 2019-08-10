@@ -8,7 +8,7 @@ const tailwindcss = require('tailwindcss')
 const autoprefixer = require('autoprefixer')
 const minifyCSS = require('gulp-csso')
 const purgecss = require('@fullhuman/postcss-purgecss')
-const { stream, init: initBrowserSync } = require('browser-sync')
+const { stream, init: initBrowserSync, reload } = require('browser-sync')
 
 const IS_PROD = process.env.NODE_ENV === 'prod'
 const SOURCE_PATH = './src/'
@@ -22,7 +22,6 @@ const GLOBS = {
 // ---------------------------------------------------------
 
 const styleProd = () => src(GLOBS.style)
-  .pipe(sass().on('error', sass.logError))
   .pipe(postcss([
     tailwindcss,
     autoprefixer,
@@ -31,21 +30,23 @@ const styleProd = () => src(GLOBS.style)
       defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
     }),
   ]))
+  .pipe(sass().on('error', sass.logError))
   .pipe(minifyCSS())
   .pipe(dest(DIST_DIR))
 
 const styleDev = () => src(GLOBS.style)
-  .pipe(sass().on('error', sass.logError))
   .pipe(postcss([
     tailwindcss,
     autoprefixer,
   ]))
+  .pipe(sass().on('error', sass.logError))
   .pipe(dest(DIST_DIR))
   .pipe(stream())
 
 const style = IS_PROD ? styleProd : styleDev
 
-const copy = () => src(GLOBS.static).pipe(dest(DIST_DIR))
+const copy = () => src(GLOBS.static)
+  .pipe(dest(DIST_DIR))
 
 const serve = () => {
   initBrowserSync({
@@ -59,6 +60,7 @@ const serve = () => {
 
 task('watch', () => {
   watch(GLOBS.static, copy)
+    .on('change', reload)
   watch(GLOBS.style, style)
 })
 
