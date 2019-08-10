@@ -1,36 +1,67 @@
 /* eslint-disable global-require */
-const { task, src, dest } = require('gulp')
+const {
+  task, src, dest, watch, parallel,
+} = require('gulp')
 const postcss = require('gulp-postcss')
-const sass = require('gulp-sass')()
+const sass = require('gulp-sass')
 const tailwindcss = require('tailwindcss')
 const autoprefixer = require('autoprefixer')
-const minifyCSS = require('gulp-csso')()
-const purgecss = require('@fullhuman/postcss-purgecss')({
-  content: [
-    './src/**/*.html',
-  ],
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+const minifyCSS = require('gulp-csso')
+const purgecss = require('@fullhuman/postcss-purgecss')
+const { stream, init: initBrowserSync } = require('browser-sync')
+
+const IS_PROD = process.env.NODE_ENV === 'prod'
+const SOURCE_PATH = './src/'
+const DIST_DIR = './dist/'
+
+const GLOBS = {
+  static: [`${SOURCE_PATH}index.html`],
+  style: [`${SOURCE_PATH}styles/main.scss`],
+}
+
+// ---------------------------------------------------------
+
+const styleProd = () => src(GLOBS.style)
+  .pipe(sass().on('error', sass.logError))
+  .pipe(postcss([
+    tailwindcss,
+    autoprefixer,
+    purgecss({
+      content: [...GLOBS.static],
+      defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+    }),
+  ]))
+  .pipe(minifyCSS())
+  .pipe(dest(DIST_DIR))
+
+const styleDev = () => src(GLOBS.style)
+  .pipe(sass().on('error', sass.logError))
+  .pipe(postcss([
+    tailwindcss,
+    autoprefixer,
+  ]))
+  .pipe(dest(DIST_DIR))
+  .pipe(stream())
+
+const style = IS_PROD ? styleProd : styleDev
+
+const copy = () => src(GLOBS.static).pipe(dest(DIST_DIR))
+
+const serve = () => {
+  initBrowserSync({
+    server: {
+      baseDir: DIST_DIR,
+    },
+  })
+}
+
+// ---------------------------------------------------------
+
+task('watch', () => {
+  watch(GLOBS.static, copy)
+  watch(GLOBS.style, style)
 })
 
-const IS_PROD = process.env.NODE_ENV === 'production'
-const DIST_DIR = 'dist/'
+task('default', parallel(copy, style))
 
-task('style', () => {
-  let thisTask = src('./src/styles/main.scss')
-    .pipe(sass)
-    .pipe(postcss([
-      tailwindcss,
-      autoprefixer,
-      ...IS_PROD
-        ? [purgecss]
-        : [],
-    ]))
-
-  if (IS_PROD) {
-    thisTask = thisTask.pipe(minifyCSS)
-  }
-
-  return thisTask.pipe(dest(DIST_DIR))
-})
-
-task('static', () => src('./src/index.html').pipe(dest(DIST_DIR)))
+task('dev', parallel(serve, 'watch'))
