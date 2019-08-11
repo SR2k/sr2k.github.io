@@ -1,0 +1,7 @@
+#timeline {
+  top: 0;
+
+  .dots {
+    transform: translateY(calc(-50% - 1px));
+  }
+}

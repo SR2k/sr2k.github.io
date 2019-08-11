@@ -8,9 +8,9 @@
   <title>Siyuan Cao</title>
 </head>
 <body class="body">
-  <header class="header">
+  <header class="large-shadow border-gray-700 border-b-2 fixed w-full bg-gray-900 z-50" id="header">
     <div class="container p-4 mx-auto flex items-center justify-between">
-      <span class="title">Siyuan Cao</span>
+      <span class="text-base md:text-xl lg:text-2xl">Siyuan Cao</span>
       <nav>
         <ul>
           <li>contact</li>
@@ -19,8 +19,8 @@
     </div>
   </header>
 
-  <div class="landing">
-    <div class="container p-4 pt-14 mx-auto">
+  <div class="section" id="landing">
+    <div class="container p-4 pt-14 mx-auto" id="landingText">
       <p class="text-2xl leading-none">Hola! This is...</p>
       <p class="text-super-xl leading-none font-bold">SR2k.</p>
       <p class="text-2xl leading-none text-pink-600">Hangzhou based frontend engineer</p>
@@ -28,7 +28,25 @@
       <p class="mt-5 text-gray-500">Feb 1997 / 22 yrs old</p>
       <p class="text-gray-500">Tianjin, China</p>
     </div>
-    <div class="scroll-hint"></div>
+    <div class="w-8 h-12 text-center absolute mx-auto border-gray-500 border-2 rounded-full scroll-hint">
+      <div class="h-3 inline-block bg-gray-500 rounded wheel"></div>
+    </div>
   </div>
+
+  <div class="section sticky" id="timeline">
+    <div class="border-t-2 border-gray-500 w-full relative">
+      <div class="w-2/3 mx-auto flex justify-between absolute dots left-0 right-0 dots">
+        <div class="w-4 h-4 rounded-full bg-gray-300"></div>
+        <div class="w-4 h-4 rounded-full bg-gray-300"></div>
+        <div class="w-4 h-4 rounded-full bg-gray-300"></div>
+      </div>
+    </div>
+
+    <div class="h-24 border-l-2 border-pink-600 absolute" id="timelinePointer"></div>
+  </div>
+  <div class="section"></div>
+  <div class="section"></div>
+
+  <div class="section"></div>
 </body>
 </html>

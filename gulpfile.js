@@ -16,12 +16,13 @@ const DIST_DIR = './dist/'
 
 const GLOBS = {
   static: [`${SOURCE_PATH}index.html`],
-  style: [`${SOURCE_PATH}styles/main.scss`],
+  styleEntry: `${SOURCE_PATH}styles/main.scss`,
+  styles: `${SOURCE_PATH}styles/*.scss`,
 }
 
 // ---------------------------------------------------------
 
-const styleProd = () => src(GLOBS.style)
+const styleProd = () => src(GLOBS.styleEntry)
   .pipe(postcss([
     tailwindcss,
     autoprefixer,
@@ -34,7 +35,7 @@ const styleProd = () => src(GLOBS.style)
   .pipe(minifyCSS())
   .pipe(dest(DIST_DIR))
 
-const styleDev = () => src(GLOBS.style)
+const styleDev = () => src(GLOBS.styleEntry)
   .pipe(postcss([
     tailwindcss,
     autoprefixer,
@@ -61,7 +62,7 @@ const serve = () => {
 task('watch', () => {
   watch(GLOBS.static, copy)
     .on('change', reload)
-  watch(GLOBS.style, style)
+  watch(GLOBS.styles, style)
 })
 
 task('default', parallel(copy, style))
