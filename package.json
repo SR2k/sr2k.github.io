@@ -20,8 +20,8 @@
       "stylelint --syntax=scss",
       "git add"
     ],
-    "*.js": [
-      "eslint",
+    "*.ts": [
+      "tslint",
       "git add"
     ]
   },
@@ -38,6 +38,7 @@
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
+    "codelyzer": "^5.1.0",
     "css-loader": "^3.2.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^17.1.1",
@@ -59,6 +60,8 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-scss": "^3.9.3",
     "ts-loader": "^6.0.4",
+    "tslint": "^5.18.0",
+    "tslint-microsoft-contrib": "^6.2.0",
     "typescript": "^3.5.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.1",

@@ -1,0 +1,15 @@
+{
+  "rulesDirectory": [
+    "node_modules/tslint-microsoft-contrib"
+  ],
+  "extends": [
+    "tslint-microsoft-contrib/recommended"
+  ],
+  "rules": {
+    "semicolon": [true, "never"],
+    "quotemark": [true, "single"],
+    "object-literal-sort-keys": false,
+    "no-relative-imports": false,
+    "no-cookies": false
+  }
+}

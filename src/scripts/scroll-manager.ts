@@ -1,19 +1,42 @@
 interface IObserverCallbackParams {
-  phase?: number
+  /**
+   * The total progress within the whole page
+   */
+  pageProgress?: number
+
+  /**
+   * Progress within the current phase
+   */
+  currentProgress?: number
+
+  /**
+   * Current scroll top
+   */
   top?: number
+
+  /**
+   * 100vh
+   */
   height?: number
+
+  /**
+   * 100vw
+   */
   width?: number
 }
 
 type ObserverCallback = (params: IObserverCallbackParams) => void
 
 interface IObserver {
+  /**
+   *
+   */
   from: number
   to: number
   callback: ObserverCallback
 }
 
-export default class {
+export class ScrollManager {
   private landing: HTMLElement = document.getElementById('landing')
   private observers: IObserver[] = []
 
@@ -21,18 +44,19 @@ export default class {
     window.addEventListener('scroll', () => { this.execute() })
   }
 
-  observe(observer: IObserver): void {
+  public observe(observer: IObserver): void {
     this.observers.push(observer)
   }
 
-  execute(): void {
+  private execute(): void {
     const { top, height, width } = this.landing.getBoundingClientRect()
-    const phase = -1 * top / height
+    const pageProgress = -1 * top / height
 
     this.observers.forEach(({ callback, from, to }) => {
-      if (phase >= from && phase <= to) {
+      if (pageProgress >= from && pageProgress <= to) {
+        const currentProgress = (pageProgress - from) / (to - from)
         callback({
-          phase, top, height, width,
+          pageProgress, top, height, width, currentProgress,
         })
       }
     })

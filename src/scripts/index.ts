@@ -1,7 +1,7 @@
-import ScrollManager from './scroll-manager'
+import { ScrollManager } from './scroll-manager'
 
-import '../styles/main.scss'
 import '../index.html'
+import '../styles/main.scss'
 
 const manager = new ScrollManager()
 
@@ -12,18 +12,17 @@ const timeline: HTMLElement = document.getElementById('timeline')
 manager.observe({
   from: 0,
   to: 1,
-  callback: ({ phase }) => {
-    text.style.cssText = `transform: translateY(${phase / 0.02}%); opacity: ${1 - phase}`
+  callback: ({ currentProgress }) => {
+    text.style.cssText = `transform: translateY(${currentProgress / 0.02}%); opacity: ${1 - currentProgress}`
   },
 })
 
 manager.observe({
   from: 1,
   to: 3,
-  callback: ({ phase, width }) => {
+  callback: ({ currentProgress, width }) => {
     timeline.style.cssText = 'position: sticky'
-    const percent = (phase - 1) / 2
-    marker.style.cssText = `left: ${percent * width}px`
+    marker.style.cssText = `left: ${currentProgress * width}px`
   },
 })
 
