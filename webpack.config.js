@@ -10,7 +10,7 @@ const IS_PROD = process.env.NODE_ENV === 'prod'
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, 'src/scripts/index.js'),
+    index: path.resolve(__dirname, 'src/scripts/index.ts'),
   },
   output: {
     path: outputDir,
@@ -56,6 +56,11 @@ module.exports = {
         ],
       },
       {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
@@ -68,6 +73,9 @@ module.exports = {
         },
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new MiniCssExtractPlugin({

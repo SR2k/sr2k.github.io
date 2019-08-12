@@ -4,9 +4,10 @@ import '../styles/main.scss'
 import '../index.html'
 
 const manager = new ScrollManager()
-const text = document.getElementById('landingText')
-const marker = document.getElementById('timelinePointer')
-const timeline = document.getElementById('timeline')
+
+const text: HTMLElement = document.getElementById('landingText')
+const marker: HTMLElement = document.getElementById('timelinePointer')
+const timeline: HTMLElement = document.getElementById('timeline')
 
 manager.observe({
   from: 0,
