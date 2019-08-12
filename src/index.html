@@ -1,54 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./index.css">
-  <title>Siyuan Cao</title>
-</head>
-<body class="body">
-  <header class="large-shadow border-gray-700 border-b-2 fixed w-full bg-gray-900 z-50" id="header">
-    <div class="container p-4 mx-auto flex items-center justify-between">
-      <span class="text-base md:text-xl lg:text-2xl">Siyuan Cao</span>
-      <nav>
-        <ul>
-          <li>contact</li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Siyuan Cao</title>
+  </head>
+  <body class="body">
+    <header
+      class="large-shadow border-gray-700 border-b-2 fixed w-full bg-gray-900 z-50"
+      id="header"
+    >
+      <div class="container p-4 mx-auto flex items-center justify-between">
+        <span class="text-base md:text-xl lg:text-2xl">Siyuan Cao</span>
+        <nav>
+          <ul>
+            <li>contact</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <div class="section" id="landing">
-    <div class="container p-4 pt-14 mx-auto" id="landingText">
-      <p class="text-2xl leading-none">Hola! This is...</p>
-      <p class="text-super-xl leading-none font-bold">SR2k.</p>
-      <p class="text-2xl leading-none text-pink-600">Hangzhou based frontend engineer</p>
-      <p class="mt-5 text-gray-500">So many people asked about <i>SR2k</i>, the name I've been<br>used and tattoed. Bla bla bla bla bla bla bla.</p>
-      <p class="mt-5 text-gray-500">Feb 1997 / 22 yrs old</p>
-      <p class="text-gray-500">Tianjin, China</p>
-    </div>
-    <div class="w-8 h-12 text-center absolute mx-auto border-gray-500 border-2 rounded-full scroll-hint">
-      <div class="h-3 inline-block bg-gray-500 rounded wheel"></div>
-    </div>
-  </div>
-
-  <div class="section sticky" id="timeline">
-    <div class="border-t-2 border-gray-500 w-full relative">
-      <div class="w-2/3 mx-auto flex justify-between absolute dots left-0 right-0 dots">
-        <div class="w-4 h-4 rounded-full bg-gray-300"></div>
-        <div class="w-4 h-4 rounded-full bg-gray-300"></div>
-        <div class="w-4 h-4 rounded-full bg-gray-300"></div>
+    <div class="section" id="landing">
+      <div class="container p-4 pt-14 mx-auto" id="landingText">
+        <p class="text-2xl leading-none">Hola! This is...</p>
+        <p class="text-super-xl leading-none font-bold">SR2k.</p>
+        <p class="text-2xl leading-none text-pink-600">Hangzhou based frontend engineer</p>
+        <p class="mt-5 text-gray-500">
+          So many people asked about <i>SR2k</i>, the name I've been<br />used and tattoed. Bla bla
+          bla bla bla bla bla.
+        </p>
+        <p class="mt-5 text-gray-500">Feb 1997 / 22 yrs old</p>
+        <p class="text-gray-500">Tianjin, China</p>
+      </div>
+      <div
+        class="w-8 h-12 text-center absolute mx-auto border-gray-500 border-2 rounded-full scroll-hint"
+      >
+        <div class="h-3 inline-block bg-gray-500 rounded wheel"></div>
       </div>
     </div>
 
-    <div class="h-24 border-l-2 border-pink-600 absolute" id="timelinePointer"></div>
-  </div>
-  <div class="section"></div>
-  <div class="section"></div>
+    <div class="section sticky flex-col justify-center" id="timeline">
+      <div class="relative container mx-auto px-4 text">
+        <div class="w-full flex justify-center absolute" id="experience1">
+          <div>
+            <h2 class="text-2xl mb-2">Education</h2>
+            <p>Tianjin University of Science and Technology</p>
+            <p class="text-gray-500 text-sm">Digital Publishing, Bachelors' Degree</p>
+            <p class="text-gray-500 text-sm">Sep '15 - Jun '20</p>
+          </div>
+        </div>
 
-  <div class="section"></div>
+        <div class="w-full mx-auto flex justify-center absolute" id="experience2">
+          <div>
+            <h2 class="text-2xl mb-2">Internship</h2>
+            <p>Alibaba Inc.</p>
+            <p class="text-gray-500 text-sm">Frontend Engineer</p>
+            <p class="text-gray-500 text-sm">Jul - Aug '19</p>
+            <p class="mt-3 text-gray-500">
+              Learn internal React technologies.
+              Build business side web apps and internal component repo.
+              Fix bugs, blablabla.
+            </p>
+          </div>
+        </div>
 
-  <script src="./index.js"></script>
-</body>
+        <div class="w-full mx-auto flex justify-center absolute" id="experience3">
+          <div>
+            <h2 class="text-2xl mb-2">Project</h2>
+            <p>CESC</p>
+            <p class="text-gray-500 text-sm">Fullstack Engineer</p>
+            <p class="text-gray-500 text-sm">Mar - Apr '19</p>
+            <p class="mt-3 text-gray-500">
+              Built with Angular + ASP.NET core + MySQL, the CSEC project is a full solution for the
+              CSE competition hosted by SZU. Packed with a static site, an enrollment system and an`
+              admin system, this solution has provided thousands of competitors easy access to the
+              information of the competition.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t-2 border-gray-500 w-full relative">
+        <div class="container px-4 mx-auto flex justify-between absolute dots left-0 right-0 dots">
+          <div class="w-4 h-4 rounded-full"></div>
+          <div class="w-4 h-4 rounded-full bg-gray-300"></div>
+          <div class="w-4 h-4 rounded-full bg-gray-300"></div>
+          <div class="w-4 h-4 rounded-full"></div>
+
+          <div class="h-24 border-l-2 border-pink-600 absolute" id="timelinePointer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+
+    <div class="section"></div>
+
+    <script src="./index.js"></script>
+  </body>
 </html>

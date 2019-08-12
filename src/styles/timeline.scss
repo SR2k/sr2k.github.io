@@ -4,4 +4,30 @@
   .dots {
     transform: translateY(calc(-50% - 1px));
   }
+
+  .text {
+    height: 40vh;
+  }
+}
+
+#timelinePointer {
+  transform: translateY(calc(-50% + 0.5rem));
+}
+
+#experience1,
+#experience2,
+#experience3 {
+  opacity: 0;
+  transform: translateX(50%);
+  transition: opacity 200ms, transform 200ms;
+
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &.past {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
 }
