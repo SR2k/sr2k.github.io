@@ -3,11 +3,10 @@ const tailwind = require('tailwindcss')
 const autoprefixer = require('autoprefixer')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const purgecss = require('@fullhuman/postcss-purgecss')
+const WebpackBar = require('webpackbar')
 
 const outputDir = path.resolve(__dirname, 'dist/')
 const IS_PROD = process.env.NODE_ENV === 'prod'
-
-// TODO: copy html
 
 module.exports = {
   entry: {
@@ -61,11 +60,19 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.html$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
+      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'index.css',
     }),
+    new WebpackBar(),
   ],
 }

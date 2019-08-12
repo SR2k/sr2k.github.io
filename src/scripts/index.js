@@ -1,6 +1,7 @@
 import ScrollManager from './scroll-manager'
 
 import '../styles/main.scss'
+import '../index.html'
 
 const manager = new ScrollManager()
 const text = document.getElementById('landingText')
