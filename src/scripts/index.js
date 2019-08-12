@@ -1,5 +1,7 @@
 import ScrollManager from './scroll-manager'
 
+import '../styles/main.scss'
+
 const manager = new ScrollManager()
 const text = document.getElementById('landingText')
 const marker = document.getElementById('timelinePointer')
