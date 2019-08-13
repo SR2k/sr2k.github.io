@@ -1,8 +1,6 @@
 const path = require('path')
-const tailwind = require('tailwindcss')
 const autoprefixer = require('autoprefixer')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const purgecss = require('@fullhuman/postcss-purgecss')
 const WebpackBar = require('webpackbar')
 
 const outputDir = path.resolve(__dirname, 'dist/')
@@ -42,14 +40,7 @@ module.exports = {
             options: {
               ident: 'postcss',
               plugins: [
-                tailwind,
                 autoprefixer,
-                ...IS_PROD
-                  ? [purgecss({
-                    content: ['./src/**/*.html'],
-                    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-                  })]
-                  : [],
               ],
             },
           },

@@ -1,25 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./variables.scss";
 
 .body {
-  @apply bg-gray-900;
-  @apply text-gray-300;
-}
-
-.large-shadow {
-  box-shadow: 0 1rem 5rem -0.5rem rgba($color: theme('colors.gray.900'), $alpha: 0.75);
+  background: $gray-900;
+  color: $gray-100;
 }
 
 .section {
-  @apply mx-auto;
-  @apply h-screen;
-  @apply flex;
-  @apply items-center;
-  @apply overflow-x-hidden;
-
+  height: 100vh;
   min-height: 40rem;
 }
 
+.container {
+  width: 100%;
+  padding: 1rem;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+  @media screen and (min-width: $md) {
+    max-width: $md;
+  }
+
+  @media screen and (min-width: $lg) {
+    max-width: $lg;
+  }
+
+  @media screen and (min-width: $xl) {
+    max-width: $xl;
+  }
+}
+
+@import "./header.scss";
 @import "./landing.scss";
 @import "./timeline.scss";

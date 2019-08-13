@@ -2,6 +2,7 @@ import { ScrollManager } from './scroll-manager'
 
 import '../index.html'
 import '../styles/main.scss'
+import 'normalize.css/normalize.css'
 
 const getEl = (selector: string) => document.getElementById(selector)
 
