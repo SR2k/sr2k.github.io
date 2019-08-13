@@ -41,9 +41,9 @@ const activateExperience = (no: number) => {
 manager.observe({
   from: 1,
   to: 4,
-  callback: ({ currentProgress, width, pageProgress }) => {
+  callback: ({ currentProgress, height, pageProgress }) => {
     timeline.style.cssText = 'position: sticky'
-    marker.style.cssText = `left: ${currentProgress * width}px`
+    marker.style.cssText = `top: ${currentProgress * height}px`
     activateExperience(parseInt((pageProgress - 1).toString()))
   },
 })

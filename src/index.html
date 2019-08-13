@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-hans">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
         <span class="title">Siyuan Cao</span>
         <nav>
           <ul>
-            <li>contact</li>
+            <li>联系方式</li>
           </ul>
         </nav>
       </div>
@@ -23,68 +23,58 @@
       <div class="container" id="landingText">
         <p class="greetings">Hola! This is...</p>
         <p class="title">SR2k.</p>
-        <p class="subtitle">Hangzhou based frontend engineer</p>
+        <p class="subtitle">前端狗，base 杭州</p>
         <p class="blah">
-          So many people asked about <i>SR2k</i>, the name I've been<br />used and tattoed. Bla bla
-          bla bla bla bla bla.
+          好吧，其实挺多人问过 <i>SR2k</i> 到底是啥的，其实就是个网名而已 ;-)
         </p>
-        <p class="info">Feb 1997 / 22 yrs old</p>
-        <p class="info">Tianjin, China</p>
+        <!-- TODO: use js t render age -->
+        <p class="info">1997 年二月 / 22 周岁</p>
+        <p class="info">来自安徽省合肥市</p>
       </div>
       <div class="scroll-hint">
         <div class="wheel"></div>
       </div>
     </div>
 
-    <div class="section sticky flex-col justify-center" id="timeline">
-      <div class="relative container mx-auto px-4 text">
-        <div class="w-full flex justify-center absolute" id="experience1">
-          <div>
-            <h2 class="text-2xl mb-2">Education</h2>
-            <p>Tianjin University of Science and Technology</p>
-            <p class="text-gray-500 text-sm">Digital Publishing, Bachelors' Degree</p>
-            <p class="text-gray-500 text-sm">Sep '15 - Jun '20</p>
-          </div>
-        </div>
+    <div class="section" id="timeline">
+      <div class="ruler">
+        <div class="dots">
+          <div class="dot"></div>
+          <div class="dot active"></div>
+          <div class="dot active"></div>
+          <div class="dot"></div>
 
-        <div class="w-full mx-auto flex justify-center absolute" id="experience2">
-          <div>
-            <h2 class="text-2xl mb-2">Internship</h2>
-            <p>Alibaba Inc.</p>
-            <p class="text-gray-500 text-sm">Frontend Engineer</p>
-            <p class="text-gray-500 text-sm">Jul - Aug '19</p>
-            <p class="mt-3 text-gray-500">
-              Learn internal React technologies.
-              Build business side web apps and internal component repo.
-              Fix bugs, blablabla.
-            </p>
-          </div>
-        </div>
-
-        <div class="w-full mx-auto flex justify-center absolute" id="experience3">
-          <div>
-            <h2 class="text-2xl mb-2">Project</h2>
-            <p>CESC</p>
-            <p class="text-gray-500 text-sm">Fullstack Engineer</p>
-            <p class="text-gray-500 text-sm">Mar - Apr '19</p>
-            <p class="mt-3 text-gray-500">
-              Built with Angular + ASP.NET core + MySQL, the CSEC project is a full solution for the
-              CSE competition hosted by SZU. Packed with a static site, an enrollment system and an`
-              admin system, this solution has provided thousands of competitors easy access to the
-              information of the competition.
-            </p>
-          </div>
+          <div id="timelinePointer"></div>
         </div>
       </div>
 
-      <div class="border-t-2 border-gray-500 w-full relative">
-        <div class="container px-4 mx-auto flex justify-between absolute dots left-0 right-0 dots">
-          <div class="w-4 h-4 rounded-full"></div>
-          <div class="w-4 h-4 rounded-full bg-gray-300"></div>
-          <div class="w-4 h-4 rounded-full bg-gray-300"></div>
-          <div class="w-4 h-4 rounded-full"></div>
+      <div class="text container">
+        <div id="experience1">
+          <p class="date">'15 九月 - '20 六月</p>
+          <p class="title">天津科技大学</p>
+          <p class="subtitle">数字出版专业，学士学位</p>
+        </div>
 
-          <div class="h-24 border-l-2 border-pink-600 absolute" id="timelinePointer"></div>
+        <div id="experience2">
+          <p class="date">'19 七月 - 八月</p>
+          <p class="title">阿里巴巴集团</p>
+          <p class="subtitle">实习前端工程师</p>
+          <div class="divider"></div>
+          <p class="detail">
+              在阿里巴巴集团旗下阿里本地生活团队终端业务部进行暑期实习，学习各种 行业规范、内部解决方案及支付宝小程序等。
+              参与一些简单的 bug 修复以 及内部跨端组件库的开发。
+          </p>
+        </div>
+
+        <div id="experience3">
+          <p class="date">'19 三月 - 四月</p>
+          <p class="title">CESC</p>
+          <p class="subtitle">全栈开发</p>
+          <div class="divider"></div>
+          <p class="detail">
+              使用 ASP.NET Core + Angular，全栈为 2019 粤港澳创新公益项目大赛制作了官网、报名系统和管理员系统。
+              为数万名访问者提供了明晰、便捷的信 息查询及在线报名等服务。
+          </p>
         </div>
       </div>
     </div>
