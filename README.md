@@ -1,3 +1,3 @@
 # SR2k.top
 
-Switch to `v2/react` branch to learn more
+This is the deployed result. Switch to `v2/react` branch to access the source code.
