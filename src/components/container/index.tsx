@@ -11,8 +11,8 @@ const Container: FC<IContainerProps> = ({ children, verticalPadding = 0, classNa
   <div
     className={`container ${className}`}
     style={{
-      marginTop: `${verticalPadding}rem`,
-      marginBottom: `${verticalPadding}rem`,
+      paddingTop: `${verticalPadding}rem`,
+      paddingBottom: `${verticalPadding}rem`,
     }}>
     {children}
   </div>

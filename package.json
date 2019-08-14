@@ -78,10 +78,10 @@
     "build": "node scripts/build.js",
     "lint:style": "stylelint ./src/**/*.scss --syntax scss",
     "lint:script": "eslint ./src/**/*.ts[x]",
-    "lint": "yarn lint:script | yarn lint:style",
+    "lint": "yarn lint:script && yarn lint:style",
     "fix:style": "stylelint ./src/**/*.scss --syntax scss --fix",
     "fix:script": "eslint ./src/**/*.ts[x] --fix",
-    "fix": "yarn fix:script | yarn fix:style"
+    "fix": "yarn fix:script && yarn fix:style"
   },
   "browserslist": {
     "production": [

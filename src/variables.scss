@@ -24,3 +24,7 @@ $xl: 1280px;
 $hd: 1440px;
 
 $breakpoints: ($sm, $md, $lg, $xl, $hd);
+
+// Easing
+
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
