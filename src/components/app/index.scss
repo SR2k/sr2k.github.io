@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.about-social-links {
+  padding-top: 2rem;
+  margin-bottom: -1.6rem;
+
+  .about-social-link {
+    margin: {
+      right: 1.6rem;
+      bottom: 1.6rem;
+    }
+
+    @media screen and (max-width: $md) {
+      display: flex;
+      margin-right: 0;
+
+      a {
+        text-align: center;
+      }
+    }
+  }
+}
