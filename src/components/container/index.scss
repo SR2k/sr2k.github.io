@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+.container {
+  width: 100%;
+  padding: {
+    left: 1rem;
+    right: 1rem;
+  }
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+  @each $breakpoint in $breakpoints {
+    @media screen and (min-width: $breakpoint) {
+      max-width: $breakpoint;
+    }
+  }
+}
