@@ -1,8 +1,8 @@
 @import "./variables.scss";
 
 #header {
-  box-shadow: 0 1rem 5rem -0.5rem rgba($color: $gray-900, $alpha: 0.75);
   position: absolute;
+  padding: 8px 0;
   width: 100%;
 
   .container {
