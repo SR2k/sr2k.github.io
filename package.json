@@ -76,10 +76,12 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "lint": "eslint ./src/**/*.ts[x] && stylelint ./src/**/*.scss --syntax scss"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "lint:style": "stylelint ./src/**/*.scss --syntax scss",
+    "lint:script": "eslint ./src/**/*.ts[x]",
+    "lint": "yarn lint:script | yarn lint:style",
+    "fix:style": "stylelint ./src/**/*.scss --syntax scss --fix",
+    "fix:script": "eslint ./src/**/*.ts[x] --fix",
+    "fix": "yarn fix:script | yarn fix:style"
   },
   "browserslist": {
     "production": [
@@ -114,7 +116,7 @@
       "git add"
     ]
   },
-  "eslint": {
+  "eslintConfig": {
     "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module",
@@ -122,9 +124,14 @@
         "jsx": true
       }
     },
-    "extends": ["eslint-config-react-app"],
+    "extends": [
+      "eslint-config-react-app"
+    ],
     "rules": {
-      "semi": ["error", "never"]
+      "semi": [
+        "error",
+        "never"
+      ]
     }
   },
   "stylelint": {
@@ -136,7 +143,17 @@
     ],
     "ignoreFiles": [
       "node_modules/**/*"
-    ]
+    ],
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "each"
+          ]
+        }
+      ]
+    }
   },
   "commitlint": {
     "extends": [
