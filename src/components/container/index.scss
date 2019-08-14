@@ -11,7 +11,7 @@
     right: auto;
   }
 
-  @each $breakpoint in $breakpoints {
+  @each $breakpoint in ($sm, $md, $lg) {
     @media screen and (min-width: $breakpoint) {
       max-width: $breakpoint;
     }

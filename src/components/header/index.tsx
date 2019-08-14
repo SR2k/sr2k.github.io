@@ -10,7 +10,7 @@ class Header extends Component {
 
   componentDidMount() {
     ScrollManager.instance.observe({
-      from: 1,
+      from: 0.4,
       execute: () => this.setState({
         transform: 'translateY(0)',
       }),
