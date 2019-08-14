@@ -8,7 +8,7 @@
 
   .hero-subtitle {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .hero-title {
@@ -22,38 +22,38 @@
   }
 
   &.hero-light {
-    background-color: $accent-100;
-    color: $accent-800;
+    background-color: $gray-100;
+    color: $gray-700;
 
     .theme-subtitle {
-      color: $accent-600;
+      color: $gray-600;
     }
 
     .theme-helper {
-      color: $accent-400;
-      border-color: $accent-400;
+      color: $gray-500;
+      border-color: $gray-300;
     }
 
     .theme-title {
-      color: $accent-900;
+      color: $accent-600;
     }
   }
 
   &.hero-accent {
-    background-color: $accent-300;
-    color: $accent-700;
+    background-color: $gray-900;
+    color: $gray-300;
 
     .theme-subtitle {
-      color: $accent-800;
+      color: $gray-400;
     }
 
     .theme-helper {
-      color: $accent-500;
-      border-color: $accent-500;
+      color: $gray-600;
+      border-color: $gray-700;
     }
 
     .theme-title {
-      color: $accent-900;
+      color: $accent-400;
     }
   }
 }

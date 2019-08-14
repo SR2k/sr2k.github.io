@@ -10,11 +10,16 @@
   .accordion-heading {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .accordion-title {
       font-size: 1rem;
       font-weight: normal;
       font-style: normal;
+    }
+
+    .accordion-period {
+      font-size: 0.8rem;
     }
   }
 
@@ -23,6 +28,7 @@
     max-height: 0;
     opacity: 0;
     transition: all 1000ms $ease-out-expo;
+    font-size: 0.8rem;
   }
 
   &:hover {
