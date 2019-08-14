@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2ea54f5e.chunk.css",
+    "main.js": "/static/js/main.fbb6fd64.chunk.js",
+    "main.js.map": "/static/js/main.fbb6fd64.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.89b118b1.js",
+    "runtime~main.js.map": "/static/js/runtime~main.89b118b1.js.map",
+    "static/css/2.764ccc25.chunk.css": "/static/css/2.764ccc25.chunk.css",
+    "static/js/2.4207dd05.chunk.js": "/static/js/2.4207dd05.chunk.js",
+    "static/js/2.4207dd05.chunk.js.map": "/static/js/2.4207dd05.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.fde32ee76f3d6ca1074f70e40cf9849e.js": "/precache-manifest.fde32ee76f3d6ca1074f70e40cf9849e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.2ea54f5e.chunk.css.map": "/static/css/main.2ea54f5e.chunk.css.map",
+    "static/media/index.scss": "/static/media/montserrat-regular-webfont.f7bfca24.woff"
+  }
+}
