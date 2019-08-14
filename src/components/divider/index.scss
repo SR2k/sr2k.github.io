@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.divider {
+  margin: 1rem 0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border: {
+    left: none;
+    bottom: none;
+    right: none;
+  }
+}

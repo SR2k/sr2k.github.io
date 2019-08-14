@@ -23,7 +23,7 @@ class Marquee extends Component<IMarqueeProps> {
           index: index + 1
         })
         const next = text.slice(index, index + 1)
-        setTimeout(changeText, next === '' ? 100 : 50)
+        setTimeout(changeText, next === ' ' ? 100 : 75)
       } else if (index === text.length && !this.isDeletingMode) {
         setTimeout(changeText, 1500)
         this.isDeletingMode = true
@@ -31,7 +31,7 @@ class Marquee extends Component<IMarqueeProps> {
         this.setState({
           index: index - 1
         })
-        setTimeout(changeText, 50)
+        setTimeout(changeText, 30)
       } else {
         this.isDeletingMode = false
         change()

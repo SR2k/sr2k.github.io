@@ -1,16 +1,17 @@
 @import "../../variables.scss";
 
 .hero {
-  .title,
-  .subtitle {
+  .hero-title,
+  .hero-subtitle {
     text-transform: uppercase;
   }
 
-  .subtitle {
+  .hero-subtitle {
     margin: 0;
+    font-size: 1.2rem;
   }
 
-  .title {
+  .hero-title {
     font-weight: 900;
     font-style: italic;
     font-size: 2rem;
@@ -21,41 +22,38 @@
   }
 
   &.hero-light {
-    background-color: $purple-100;
-    color: $purple-800;
+    background-color: $accent-100;
+    color: $accent-800;
 
-    .subtitle {
-      color: $purple-600;
+    .theme-subtitle {
+      color: $accent-600;
     }
 
-    .title {
-      color: $purple-900;
+    .theme-helper {
+      color: $accent-400;
+      border-color: $accent-400;
+    }
+
+    .theme-title {
+      color: $accent-900;
     }
   }
 
   &.hero-accent {
-    background-color: $purple-400;
-    color: $purple-600;
+    background-color: $accent-300;
+    color: $accent-700;
 
-    .subtitle {
-      color: $purple-700;
+    .theme-subtitle {
+      color: $accent-800;
     }
 
-    .title {
-      color: $purple-100;
-    }
-  }
-
-  &.hero-dark {
-    background-color: $purple-900;
-    color: $purple-300;
-
-    .subtitle {
-      color: $purple-500;
+    .theme-helper {
+      color: $accent-500;
+      border-color: $accent-500;
     }
 
-    .title {
-      color: $purple-100;
+    .theme-title {
+      color: $accent-900;
     }
   }
 }

@@ -1,0 +1,34 @@
+@import "../../variables.scss";
+
+.accordion {
+  .accordion-title,
+  .accordion-subtitle,
+  .accordion-period {
+    margin: 0;
+  }
+
+  .accordion-heading {
+    display: flex;
+    justify-content: space-between;
+
+    .accordion-title {
+      font-size: 1rem;
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+
+  .accordion-children {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 1000ms $ease-out-expo;
+  }
+
+  &:hover {
+    .accordion-children {
+      opacity: 1;
+      max-height: 20rem;
+    }
+  }
+}

@@ -1,15 +1,14 @@
 @import "../../variables.scss";
 
 .landing-container {
-  color: $gray-100;
   font-size: 2rem;
   display: flex;
   align-items: center;
   text-align: center;
-  background: {
-    position: center center;
-    size: cover;
-  }
+  // background: {
+  //   position: center center;
+  //   size: cover;
+  // }
 
   p {
     line-height: 100%;
@@ -36,7 +35,7 @@
       content: '';
       display: block;
       width: 2px;
-      background-color: $gray-100;
+      background-color: $accent-500;
       position: absolute;
       transform-origin: bottom center;
       border-radius: 2px;

@@ -10,3 +10,24 @@ html {
 p {
   line-height: 180%;
 }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Bold'), url('./fonts/montserrat-bold-webfont.woff2') format('woff2'), url('./fonts/montserrat-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Extrabold Italic'), url('./fonts/montserrat-extrabolditalic-webfont.woff2') format('woff2'), url('./fonts/montserrat-extrabolditalic-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('./fonts/montserrat-regular-webfont.woff2') format('woff2'), url('./fonts/montserrat-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -3,10 +3,9 @@ import Section from '../section'
 import Container from '../container'
 import Marquee from '../marquee'
 import './index.scss'
-import bg from '../../assets/background.jpg'
 
 const descriptions = [
-  'frontend',
+  'frontend engineer',
   'student',
   'applaud for every single pixel',
   'little monster',
@@ -31,7 +30,7 @@ class Landing extends Component{
     const { index } = this.state
 
     return (
-      <Section className="landing-container" style={{ backgroundImage: `url(${bg})` }}>
+      <Section className="landing-container">
         <Container>
           <p>Hoooooooola!</p>
           <p className="slogan">SR2k</p>
