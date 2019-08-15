@@ -8,6 +8,7 @@ header {
   width: 100%;
   transition: all 600ms $ease-out-expo;
   background-color: $gray-100;
+  z-index: 1023;
 
   .header-container {
     display: flex;
