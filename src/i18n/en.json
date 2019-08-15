@@ -50,5 +50,42 @@
         "There's a gap between my dream and my major At TUST, so after class I worked hard to establish a good understanding of technical and process skills that are required to excel in the software, especially in web frontend field."
       ]
     }
+  ],
+  "what-i-am-capable-of": "What I am capable of",
+  "skill": "Skills",
+  "skills": [
+    {
+      "title": "Languages",
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "CSS",
+        "SASS / SCSS / LESS",
+        "HTML",
+        "C#"
+      ]
+    }, {
+      "title": "Frameworks & Dev Toolchains",
+      "items": [
+        "React",
+        "Redux",
+        "Angular",
+        "Webpack",
+        "Gulp"
+      ]
+    }, {
+      "title": "Professional Tools",
+        "items": [
+        "JetBrains suite",
+        "Visual Studio Code",
+        "Sketch",
+        "Xcode",
+        "GUI of macOS / Windows",
+        "CLI of macOS / Linux",
+        "Git / Git based platforms",
+        "Microsoft Office",
+        "Adobe Photoshop / Illustrator / InDesign"
+      ]
+    }
   ]
 }

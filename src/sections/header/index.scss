@@ -20,4 +20,19 @@ header {
     padding: 0;
     margin: 0;
   }
+
+  .header-lang-toggler {
+    color: inherit;
+
+    .active {
+      color: $accent-500;
+      font-weight: bold;
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 }

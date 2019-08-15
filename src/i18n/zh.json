@@ -3,7 +3,7 @@
   "who-i-am": "我是谁",
   "about-content": [
     "Hi！我叫曹思源，一般情况下会使用 SR2k 这个网名或者名字的拼音 Siyuan Cao。我现在工作和生活在杭州市。",
-    "I have always had a passion for creating things. Nowadays I use this creativity to design and develop software to impact, excite and positively influence people."
+    "我总是对创造充满热情，乘着这股热情，我利用这股热情在开发和进步的路上砥砺前行。"
   ],
   "present": "至今",
   "what-i-ve-been-thru": "走过的路",
@@ -48,6 +48,43 @@
       "content": [
         "I studied a Bachelor of Arts majoring in Digital Publishing at Tianjin University of Science and Technology in China.",
         "There's a gap between my dream and my major At TUST, so after class I worked hard to establish a good understanding of technical and process skills that are required to excel in the software, especially in web frontend field."
+      ]
+    }
+  ],
+  "what-i-am-capable-of": "我会做的",
+  "skill": "技能",
+  "skills": [
+    {
+      "title": "编程语言",
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "CSS",
+        "SASS / SCSS / LESS",
+        "HTML",
+        "C#"
+      ]
+    }, {
+      "title": "框架和工具链",
+      "items": [
+        "React",
+        "Redux",
+        "Angular",
+        "Webpack",
+        "Gulp"
+      ]
+    }, {
+      "title": "专业工具",
+        "items": [
+        "JetBrains 系列",
+        "Visual Studio Code",
+        "Sketch",
+        "Xcode",
+        "macOS / Windows 的 GUI 界面",
+        "macOS / Linux 的命令行界面",
+        "Git / 基于 Git 的协作平台",
+        "Microsoft Office",
+        "Adobe Photoshop / Illustrator / InDesign"
       ]
     }
   ]
