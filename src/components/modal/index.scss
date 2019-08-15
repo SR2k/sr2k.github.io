@@ -1,0 +1,57 @@
+@import '../../variables.scss';
+
+.modal-mask {
+  position: fixed;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1024;
+  background-color: rgba($color: $gray-900, $alpha: 0.75);
+  padding: 2rem;
+  display: flex;
+  color: $gray-600;
+
+  hr {
+    border: {
+      top: $gray-400 2px solid;
+      bottom: none;
+      left: none;
+      right: none;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .modal-body {
+    background-color: $gray-100;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    max-height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    border: none;
+    background-color: $gray-300;
+    width: 2rem;
+    font-size: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 1rem;
+    color: inherit;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $gray-500;
+      color: $gray-100;
+    }
+  }
+}

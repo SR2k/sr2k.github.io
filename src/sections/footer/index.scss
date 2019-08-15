@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+
+footer {
+  background-color: $gray-200;
+  color: $gray-500;
+  font-size: 0.75rem;
+
+  p {
+    margin: 0;
+    line-height: 125%;
+  }
+
+  .footer-copyright {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-anchor {
+    color: inherit !important;
+    text-decoration: none;
+  }
+}

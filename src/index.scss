@@ -30,6 +30,20 @@ nav {
   box-sizing: border-box;
 }
 
+a {
+  &,
+  &:visited {
+    color: $accent-500;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:active {
+    color: $accent-400;
+    text-decoration: underline;
+  }
+}
+
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat Bold'), url('./fonts/montserrat-bold-webfont.woff2') format('woff2'), url('./fonts/montserrat-bold-webfont.woff') format('woff');
