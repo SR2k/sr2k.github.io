@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import "./index.scss"
 
 interface IAccordionProps {
@@ -15,6 +16,8 @@ const Accordion: FC<IAccordionProps> = ({ title, subtitle, from, to, children })
     setActive(!active)
   }
 
+  const { t } = useTranslation()
+
   return (
     <div
       className={`accordion ${active ? 'active' : ''}`}
@@ -23,7 +26,7 @@ const Accordion: FC<IAccordionProps> = ({ title, subtitle, from, to, children })
       onMouseLeave={() => setActive(false)}>
       <div className="accordion-heading">
         <h3 className="accordion-title theme-title">{title}</h3>
-        <p className="accordion-period theme-helper">{from} - {to || 'present'}</p>
+        <p className="accordion-period theme-helper">{from} - {to || t('present')}</p>
       </div>
       <p className="accordion-subtitle theme-subtitle">{subtitle}</p>
       <div className="accordion-children theme-text">

@@ -1,0 +1,54 @@
+{
+  "about-me": "关于",
+  "who-i-am": "我是谁",
+  "about-content": [
+    "Hi！我叫曹思源，一般情况下会使用 SR2k 这个网名或者名字的拼音 Siyuan Cao。我现在工作和生活在杭州市。",
+    "I have always had a passion for creating things. Nowadays I use this creativity to design and develop software to impact, excite and positively influence people."
+  ],
+  "present": "至今",
+  "what-i-ve-been-thru": "走过的路",
+  "experience": "经历",
+  "experiences": [
+    {
+      "title": "阿里巴巴集团",
+      "subtitle": "实习前端工程师",
+      "from": "2019 年七月",
+      "content": [
+        "There's a saying that frontend engineers in China are either working for Alibaba, or on the way to Alibaba. So it's really my honor to have this internship experience at Alibaba Inc.",
+        "During the internship, I learned about internal solution for various of business, participated in the maintenance of a internal UI component library, and gain a lot of skills for real-world projects."
+      ]
+    },
+    {
+      "title": "天津市崇光科技有限公司",
+      "subtitle": "Web 前端开发实习生",
+      "from": "2018 年七月",
+      "to": "九月",
+      "content": [
+        "The internship at Bright Tech is the very first job I've ever got. Yet nothing special."
+      ]
+    },
+    {
+      "title": "CSEC 大赛官网",
+      "subtitle": "全栈开发",
+      "from": "2019 年三月",
+      "to": "四月",
+      "content": [
+        "Built with Angular 7 and ASP.NET Core 2.2, the CSEC site is a full solution for the CSEC competition held by Shenzhen University.",
+        "Now the site has fulfilled what it's been desired, and has provided thousands of visitors and competitors a convenient service."
+      ]
+    }
+  ],
+  "where-i-learned": "成长的过程",
+  "education": "教育",
+  "educations": [
+    {
+      "title": "天津科技大学",
+      "subtitle": "数字出版 学士学位",
+      "from": "2015 年九月",
+      "content": [
+        "I studied a Bachelor of Arts majoring in Digital Publishing at Tianjin University of Science and Technology in China.",
+        "There's a gap between my dream and my major At TUST, so after class I worked hard to establish a good understanding of technical and process skills that are required to excel in the software, especially in web frontend field."
+      ]
+    }
+  ]
+}

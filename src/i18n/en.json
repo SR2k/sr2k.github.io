@@ -1,0 +1,54 @@
+{
+  "about-me": "About me",
+  "who-i-am": "Who I am",
+  "about-content": [
+    "Hello! My name is Siyuan Cao, usually I use SR2k out there. I am a Frontend Engineer who currently lives and works in Hangzhou, China.",
+    "I have always had a passion for creating things. Nowadays I use this creativity to design and develop software to impact, excite and positively influence people."
+  ],
+  "present": "present",
+  "what-i-ve-been-thru": "What I've been thru",
+  "experience": "Experience",
+  "experiences": [
+    {
+      "title": "Alibaba Inc.",
+      "subtitle": "Frontend Engineer Intern",
+      "from": "Jul '19",
+      "content": [
+        "There's a saying that frontend engineers in China are either working for Alibaba, or on the way to Alibaba. So it's really my honor to have this internship experience at Alibaba Inc.",
+        "During the internship, I learned about internal solution for various of business, participated in the maintenance of a internal UI component library, and gain a lot of skills for real-world projects."
+      ]
+    },
+    {
+      "title": "Bright Tech",
+      "subtitle": "Frontend Engineer Intern",
+      "from": "Jul",
+      "to": "Sep '18",
+      "content": [
+        "The internship at Bright Tech is the very first job I've ever got. Yet nothing special."
+      ]
+    },
+    {
+      "title": "CSEC",
+      "subtitle": "Fullstack Engineer",
+      "from": "Mar",
+      "to": "Apr '19",
+      "content": [
+        "Built with Angular 7 and ASP.NET Core 2.2, the CSEC site is a full solution for the CSEC competition held by Shenzhen University.",
+        "Now the site has fulfilled what it's been desired, and has provided thousands of visitors and competitors a convenient service."
+      ]
+    }
+  ],
+  "where-i-learned": "Where I learned",
+  "education": "education",
+  "educations": [
+    {
+      "title": "TUST",
+      "subtitle": "Digital Publishing Bachelor",
+      "from": "Sep '15",
+      "content": [
+        "I studied a Bachelor of Arts majoring in Digital Publishing at Tianjin University of Science and Technology in China.",
+        "There's a gap between my dream and my major At TUST, so after class I worked hard to establish a good understanding of technical and process skills that are required to excel in the software, especially in web frontend field."
+      ]
+    }
+  ]
+}
