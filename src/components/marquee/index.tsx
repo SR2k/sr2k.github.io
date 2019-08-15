@@ -2,40 +2,50 @@ import React, { Component } from 'react'
 import './index.scss'
 
 export interface IMarqueeProps {
-  text: string
-  change: Function
+  text: string[]
 }
 
 class Marquee extends Component<IMarqueeProps> {
   state = {
-    index: 0
+    index: 0,
+    characterIndex: 0
   }
 
   isDeletingMode = false
 
+  nextString = () => {
+    const { length } = this.props.text
+    const { index } = this.state
+
+    this.setState({
+      index: index < length - 1 ? index + 1 : 0
+    })
+  }
+
   componentDidMount() {
     const changeText = () => {
-      const { index } = this.state
-      const { text, change } = this.props
+      const { characterIndex, index } = this.state
+      const { text } = this.props
+      const string = text[index]
 
-      if (index < text.length && !this.isDeletingMode) {
+      if (characterIndex < string.length && !this.isDeletingMode) {
         this.setState({
-          index: index + 1
+          characterIndex: characterIndex + 1
         })
-        const next = text.slice(index, index + 1)
+        const next = string.slice(characterIndex, characterIndex + 1)
         setTimeout(changeText, next === ' ' ? 100 : 75)
-      } else if (index === text.length && !this.isDeletingMode) {
+      } else if (characterIndex === string.length && !this.isDeletingMode) {
         setTimeout(changeText, 1500)
         this.isDeletingMode = true
-      } else if (index >= 0 && this.isDeletingMode) {
+      } else if (characterIndex >= 0 && this.isDeletingMode) {
         this.setState({
-          index: index - 1
+          characterIndex: characterIndex - 1
         })
         setTimeout(changeText, 30)
       } else {
         this.isDeletingMode = false
-        change()
-        this.setState({ index: 0 })
+        this.nextString()
+        this.setState({ characterIndex: 0 })
         setTimeout(changeText, 200)
       }
     }
@@ -45,12 +55,13 @@ class Marquee extends Component<IMarqueeProps> {
 
   render() {
     const { text } = this.props
-    const { index } = this.state
+    const { characterIndex, index } = this.state
 
     return (
       <div className="marquee">
         <p>
-          {text.slice(0, index >= 0 ? index : 0)}
+          {text[index].slice(0, characterIndex >= 0 ? characterIndex : 0)}
+          <span className="marquee-blink"></span>
         </p>
       </div>
     )

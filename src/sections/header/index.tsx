@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Container from '../container'
+import Container from '../../components/container'
 import ScrollManager from '../../common/scroll-manager'
 import "./index.scss"
 

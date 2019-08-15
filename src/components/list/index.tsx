@@ -8,7 +8,7 @@ export interface IListItemProps {
 
 export const ListItem: FC<IListItemProps> = ({ title, items }) => (
   <div className="list-item">
-    <p className="list-item-title theme-subtitle">{title}</p>
+    <p className="list-item-title theme-title">{title}</p>
     <ul className="list-item-ul">
       {
         items.map((item, key) => (

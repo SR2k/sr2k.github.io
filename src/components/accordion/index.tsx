@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import "./index.scss"
 
 interface IAccordionProps {
@@ -8,17 +8,29 @@ interface IAccordionProps {
   to?: string
 }
 
-const Accordion: FC<IAccordionProps> = ({ title, subtitle, from, to, children }) => (
-  <div className={`accordion`}>
-    <div className="accordion-heading">
-      <h3 className="accordion-title theme-title">{title}</h3>
-      <p className="accordion-period theme-helper">{from} - {to || 'present'}</p>
+const Accordion: FC<IAccordionProps> = ({ title, subtitle, from, to, children }) => {
+  const [active, setActive] = useState(false)
+
+  const handleClick = () => {
+    setActive(!active)
+  }
+
+  return (
+    <div
+      className={`accordion ${active ? 'active' : ''}`}
+      onClick={handleClick}
+      onMouseEnter={() => setActive(true)}
+      onMouseLeave={() => setActive(false)}>
+      <div className="accordion-heading">
+        <h3 className="accordion-title theme-title">{title}</h3>
+        <p className="accordion-period theme-helper">{from} - {to || 'present'}</p>
+      </div>
+      <p className="accordion-subtitle theme-subtitle">{subtitle}</p>
+      <div className="accordion-children theme-text">
+        {children}
+      </div>
     </div>
-    <p className="accordion-subtitle theme-subtitle">{subtitle}</p>
-    <div className="accordion-children theme-text">
-      {children}
-    </div>
-  </div>
-)
+    )
+}
 
 export default Accordion
