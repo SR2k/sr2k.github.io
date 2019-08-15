@@ -29,7 +29,7 @@ const Footer: FC = () => {
           </a>
           <Modal active={modalActive} onClose={() => setModalActive(false)}>
             <h2>SLI License for Montserrat Font</h2>
-            <p>Copyright 2011 The Montserrat Project Authors (<a href="https://github.com/JulietaUla/Montserrat" target="_blank" rel="noopener noreferrer">https://github.com/JulietaUla/Montserrat</a>)</p>
+            <p>Copyright 2011 The Montserrat Project Authors (<a href="https://github.com/JulietaUla/Montserrat" target="_blank" rel="noopener noreferrer"><span role="img" aria-label="link to GitHub">🔗</span></a>)</p>
             <p>This Font Software is licensed under the SIL Open Font License, Version 1.1.</p>
             <p>This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL</p>
             <hr/>

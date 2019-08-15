@@ -54,4 +54,17 @@
       color: $gray-100;
     }
   }
+
+  @media screen and (max-width: $sm) {
+    padding: 0;
+
+    .modal-close-btn {
+      right: 1rem;
+      top: 1rem;
+    }
+
+    .modal-body {
+      border-radius: 0;
+    }
+  }
 }

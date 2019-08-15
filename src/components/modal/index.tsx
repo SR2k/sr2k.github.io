@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import './index.scss'
 
 export interface IModalProps {
@@ -6,17 +6,23 @@ export interface IModalProps {
   onClose: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
-const Modal: FC<IModalProps> = ({ children, active, onClose }) => (
-  <>
-    {
-      active && <div className="modal-mask">
-        <div className="modal-body">
-          <button onClick={onClose} className="modal-close-btn">&times;</button>
-          {children}
-        </div>
-      </div>
+const body = document.querySelector('body')
+
+const Modal: FC<IModalProps> = ({ children, active, onClose }) => {
+  useEffect(() => {
+    if (body) {
+      body.style.cssText = active ? 'overflow-y: hidden' : ''
     }
-  </>
-)
+  })
+
+  return active ? (
+    <div className="modal-mask">
+      <div className="modal-body">
+        <button onClick={onClose} className="modal-close-btn">&times;</button>
+        {children}
+      </div>
+    </div>
+  ) : null
+}
 
 export default Modal
