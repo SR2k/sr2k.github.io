@@ -12,7 +12,7 @@ i18n.init({
       translations: zh
     }
   },
-  fallbackLng: "zh",
+  fallbackLng: "en",
   debug: true,
 
   // have a common namespace used around the full app
