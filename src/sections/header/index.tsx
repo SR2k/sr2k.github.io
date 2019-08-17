@@ -4,6 +4,8 @@ import Container from '../../components/container'
 import ScrollManager from '../../common/scroll-manager'
 import "./index.scss"
 
+const html = document.querySelector('html')
+
 class Header extends Component {
   state = {
     transform: 'translateY(-100%)',
@@ -26,6 +28,7 @@ class Header extends Component {
     const { language } = this.state
     const newLang = language === 'en' ? 'zh' : 'en'
     i18n.changeLanguage(newLang)
+    html!.setAttribute('lang', language === 'en' ? 'zh-Hans' : 'en-US')
     this.setState({
       language: newLang
     })
