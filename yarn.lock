@@ -1145,6 +1145,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/is-touch-device@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/@types/is-touch-device/download/@types/is-touch-device-1.0.0.tgz#c835c4c220a4e5635f4895b6223630dcd429b49c"
+  integrity sha1-yDXEwiCk5WNfSJW2IjYw3NQptJw=
+
 "@types/json-schema@^7.0.3":
   version "7.0.3"
   resolved "https://registry.npm.taobao.org/@types/json-schema/download/@types/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
@@ -5468,6 +5473,11 @@ is-text-path@^1.0.0:
   integrity sha1-Thqg+1G/vLPpJogAE5cgLBd1tm4=
   dependencies:
     text-extensions "^1.0.0"
+
+is-touch-device@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/is-touch-device/download/is-touch-device-1.0.1.tgz#9a2fd59f689e9a9bf6ae9a86924c4ba805a42eab"
+  integrity sha1-mi/Vn2iempv2rpqGkkxLqAWkLqs=
 
 is-typedarray@~1.0.0:
   version "1.0.0"
