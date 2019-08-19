@@ -1,8 +1,8 @@
-import React, { Component } from "react"
-import i18n from '../../i18n'
 import Container from '../../components/container'
 import ScrollManager from '../../common/scroll-manager'
-import "./index.scss"
+import i18n from '../../i18n'
+import React, { Component } from 'react'
+import './index.scss'
 
 const html = document.querySelector('html')
 

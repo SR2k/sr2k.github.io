@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
-import { useTranslation } from 'react-i18next'
-import Hero from '../../components/hero'
 import Accordion from '../../components/accordion'
 import Divider from '../../components/divider'
+import Hero from '../../components/hero'
+import { useTranslation } from 'react-i18next'
+import React, { FC } from 'react'
 
 interface IExpAndEdu {
   title: string

@@ -1,4 +1,4 @@
-import React, { FC, CSSProperties } from 'react'
+import React, { CSSProperties, FC } from 'react'
 import './index.scss'
 
 export interface ISectionProps {

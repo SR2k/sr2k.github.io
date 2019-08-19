@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import List, { ListItem, IListItemProps } from '../../components/list'
-import { useTranslation } from 'react-i18next'
 import Hero from '../../components/hero'
+import { useTranslation } from 'react-i18next'
+import List, { IListItemProps, ListItem } from '../../components/list'
+import React, { FC } from 'react'
 
 const Skills: FC = () => {
   const { t } = useTranslation()

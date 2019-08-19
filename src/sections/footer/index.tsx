@@ -1,6 +1,6 @@
-import React, { FC, useState } from 'react'
 import Container from '../../components/container'
 import Modal from '../../components/modal'
+import React, { FC, useState } from 'react'
 import './index.scss'
 
 const thisYear = new Date().getFullYear()

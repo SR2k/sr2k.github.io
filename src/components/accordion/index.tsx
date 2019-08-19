@@ -1,7 +1,7 @@
-import React, { FC, useCallback, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import "./index.scss"
 import cachedIsTouchDevice from '../../utils/cached-is-touch-device'
+import { useTranslation } from 'react-i18next'
+import React, { FC, useCallback, useState } from 'react'
+import './index.scss'
 
 interface IAccordionProps {
   title: string
@@ -19,13 +19,17 @@ const Accordion: FC<IAccordionProps> = ({ title, subtitle, from, to, children })
 
   const memoizedHandleMouseEnter = useCallback(
     () => {
-      if (!cachedIsTouchDevice()) setActive(true)
+      if (!cachedIsTouchDevice()) {
+        setActive(true)
+      }
     }, []
   )
 
   const memoizedHandleMouseLeave = useCallback(
     () => {
-      if (!cachedIsTouchDevice()) setActive(false)
+      if (!cachedIsTouchDevice()) {
+        setActive(false)
+      }
     }, [],
   )
 

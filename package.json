@@ -137,7 +137,26 @@
       "semi": [
         "error",
         "never"
-      ]
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "sort-imports": [
+        "error",
+        {
+          "ignoreCase": false,
+          "ignoreDeclarationSort": false,
+          "ignoreMemberSort": false,
+          "memberSyntaxSortOrder": [
+            "single",
+            "multiple",
+            "all",
+            "none"
+          ]
+        }
+      ],
+      "curly": "error"
     }
   },
   "stylelint": {

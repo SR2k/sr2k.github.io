@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
 import Container from '../container'
+import React, { FC } from 'react'
 import './index.scss'
 
 export interface IHeroProps {

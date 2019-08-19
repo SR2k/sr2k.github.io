@@ -1,8 +1,8 @@
-import React, { FC, CSSProperties } from 'react'
-import './index.scss'
-import weibo from '../../assets/weibo.png'
-import mail from '../../assets/mail.png'
 import github from '../../assets/github.png'
+import mail from '../../assets/mail.png'
+import weibo from '../../assets/weibo.png'
+import React, { CSSProperties, FC } from 'react'
+import './index.scss'
 
 const icons = {
   weibo, mail, github,

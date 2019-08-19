@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import Section from '../../components/section'
 import Container from '../../components/container'
 import Marquee from '../../components/marquee'
+import Section from '../../components/section'
+import React, { FC } from 'react'
 import './index.scss'
 
 const descriptions = [

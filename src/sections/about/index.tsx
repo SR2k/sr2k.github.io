@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import { useTranslation } from 'react-i18next'
 import Hero from '../../components/hero'
 import SocialLink from '../../components/social-link'
+import { useTranslation } from 'react-i18next'
+import React, { FC } from 'react'
 import './index.scss'
 
 const About: FC = () => {
